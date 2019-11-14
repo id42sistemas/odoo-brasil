@@ -6,7 +6,6 @@ pytrustnfe3>=0.10.0
 git+git://github.com/id42sistemas/python-cnab.git@master3-id42_masterl#egg=python3_cnab
 python3-boleto
 git+git://github.com/id42sistemas/python-sped@11.0-id42_master#egg=python-sped
-python3-boleto
 xmlsec
 lxml==4.2.3
 pycnab240
