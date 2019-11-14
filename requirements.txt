@@ -2,7 +2,10 @@ pillow==3.4.2
 ofxparse==0.16
 suds-jurko-requests
 pytrustnfe3>=0.10.0
-python3-cnab
+#python3-cnab
+git+git://github.com/id42sistemas/python-cnab.git@master3-id42_masterl#egg=python3_cnab
+python3-boleto
+git+git://github.com/id42sistemas/python-sped@11.0-id42_master#egg=python-sped
 python3-boleto
 xmlsec
 lxml==4.2.3
