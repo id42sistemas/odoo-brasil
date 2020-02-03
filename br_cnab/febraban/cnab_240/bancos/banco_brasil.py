@@ -31,6 +31,10 @@ class BancoBrasil240(Cnab240):
         vals['prazo_baixa'] = ''
         vals['controlecob_numero'] = self.order.id
         vals['controlecob_data_gravacao'] = self.data_hoje()
+
+	#vals['desconto2_percentual'] = Decimal('0.00')
+        #vals['desconto3_percentual'] = Decimal('0.00')
+
         # Codigo juro mora:
         # 1 - Valor ao dia
         # 2 - Taxa Mensal
