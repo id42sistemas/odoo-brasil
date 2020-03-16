@@ -149,7 +149,9 @@ class Cnab240(Cnab):
             'identificacao_titulo': u'0000000',  # TODO
             'identificacao_titulo_banco': u'0000000',  # TODO
             'identificacao_titulo_empresa': (' ' * 25),
-            'numero_documento': line.identifier,
+            'numero_documento': "%08d" % int(line.move_line_id.invoice_id.numero_nfse)\
+                if line.move_line_id.invoice_id.numero_nfse != '' \
+                    else "%08d" % int(line.move_line_id.invoice_id.nfe_number),
             'vencimento_titulo': self.format_date(
                 line.date_maturity),
             'valor_titulo': Decimal(str(line.amount_total)).quantize(
