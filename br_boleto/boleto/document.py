@@ -82,7 +82,9 @@ class Boleto:
             order_line.currency_id and order_line.currency_id.symbol or 'R$'
         self.boleto.quantidade = '1'
         # Importante - Número documento deve ser o identificador único da linha
-        self.boleto.numero_documento = order_line.identifier
+        self.boleto.numero_documento = "%08d" % int(order_line.move_line_id.invoice_id.numero_nfse)\
+            if order_line.move_line_id.invoice_id.numero_nfse != '' \
+                else "%08d" % int(order_line.move_line_id.invoice_id.nfe_number)
 
     def _payment_mode(self, payment_mode_id):
         """
